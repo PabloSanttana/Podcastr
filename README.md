@@ -30,6 +30,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 #### Screens
 
 ![Layout](https://github.com/PabloSanttana/Podcastr/blob/main/layout/1.png)
+![Layout](https://github.com/PabloSanttana/Podcastr/blob/main/layout/2.png)
+![Layout](https://github.com/PabloSanttana/Podcastr/blob/main/layout/3.png)
+![Layout](https://github.com/PabloSanttana/Podcastr/blob/main/layout/4.png)
 
 #### mais informação
 
