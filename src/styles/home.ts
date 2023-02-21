@@ -106,6 +106,7 @@ export const LatesEpisodes = styled.section`
 `;
 export const AllEpisodes = styled.section`
   padding-bottom: 2rem;
+  padding-top: 2rem;
 
   table {
     width: 100%;

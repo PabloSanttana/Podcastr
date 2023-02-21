@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { GetStaticPaths, GetStaticProps } from "next";
 import { format, parseISO } from "date-fns";
@@ -13,12 +13,13 @@ import {
   DescriptionContainer,
 } from "@/styles/episodes";
 import Image from "next/image";
+import PlayerContext from "@/contexts/PlayerContext";
 
 type Episode = {
   id: string;
   title: string;
   thumbnail: string;
-  membres: string;
+  members: string;
   publishedAt: string;
   duration: number;
   description: string;
@@ -30,6 +31,7 @@ interface EpisodesProps {
 }
 
 export default function Episodes({ episode }: EpisodesProps) {
+  const { handlePlay } = useContext(PlayerContext);
   return (
     <EpisodeContainer>
       <ThumbnailContainer>
@@ -46,13 +48,13 @@ export default function Episodes({ episode }: EpisodesProps) {
           style={{ objectFit: "cover" }}
           alt={episode.title}
         />
-        <button type="button">
+        <button type="button" onClick={() => handlePlay(episode)}>
           <img src="/play.svg" alt="Tocar episódio" />
         </button>
       </ThumbnailContainer>
       <header>
         <h1>{episode.title}</h1>
-        <span>{episode.membres}</span>
+        <span>{episode.members}</span>
         <span>{episode.publishedAt}</span>
         <span>{episode.durationAsString}</span>
       </header>

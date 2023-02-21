@@ -9,6 +9,7 @@ export const PlayerContainer = styled.div<propsPlayerContainer>`
   width: 26.5rem;
   height: 100vh;
   background-color: ${(props) => props.theme.COLORS.purple500};
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +28,26 @@ export const PlayerContainer = styled.div<propsPlayerContainer>`
   footer {
     align-self: stretch;
     opacity: ${(props) => (props.active ? 0.5 : 1)};
+  }
+`;
+
+export const CurrentEpisode = styled.div`
+  text-align: center;
+  img {
+    border-radius: 1.5rem;
+  }
+  strong {
+    display: block;
+    margin-top: 2rem;
+    font: 600 1.25rem Lexend, sans-serif;
+    line-height: 1.75rem;
+  }
+  span {
+    display: block;
+    margin-top: 1rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
+    color: ${(props) => props.theme.COLORS.white};
   }
 `;
 
@@ -83,12 +104,30 @@ export const ButtonsController = styled.div`
     background-color: transparent;
     border: 0;
     font-size: 0.75rem;
+    transition: filter 0.2s;
+
+    &:hover:not(:disabled) {
+      filter: brightness(0.8);
+    }
 
     &#play {
       background-color: ${(props) => props.theme.COLORS.purple400};
       border-radius: 1rem;
       width: 4rem;
       height: 4rem;
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.95);
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+    &.repeatActive {
+      background-color: ${(props) => props.theme.COLORS.green500};
+      font-size: 0;
+      border-radius: 0.3rem;
     }
   }
 `;
