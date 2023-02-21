@@ -29,6 +29,14 @@ export const PlayerContainer = styled.div<propsPlayerContainer>`
     align-self: stretch;
     opacity: ${(props) => (props.active ? 0.5 : 1)};
   }
+  @media only screen and (max-width: 1100px) {
+    width: 100%;
+    flex-direction: row;
+    height: 12rem;
+    position: fixed;
+    bottom: 0;
+    overflow-y: none;
+  }
 `;
 
 export const CurrentEpisode = styled.div`
@@ -48,6 +56,27 @@ export const CurrentEpisode = styled.div`
     opacity: 0.6;
     line-height: 1.5rem;
     color: ${(props) => props.theme.COLORS.white};
+  }
+  @media only screen and (max-width: 1100px) {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 4rem;
+      height: 4rem;
+    }
+    strong {
+      font: 600 0.7rem Lexend, sans-serif;
+      line-height: 1.3rem;
+      margin: 0px 1rem;
+    }
+    span {
+      margin: 0px;
+      max-width: 0px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 `;
 
@@ -69,6 +98,10 @@ export const EmptyPlayer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 1100px) {
+    width: 25%;
+    height: 5rem;
+  }
 `;
 
 export const Progress = styled.div`

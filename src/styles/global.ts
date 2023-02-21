@@ -23,6 +23,13 @@ body{
     }
 }
 
+@media (max-width: 600px){
+    body{
+        min-width: 600px
+    }
+}
+
+
 
 body, input, textarea, button{
     font: 500 1rem Inter,sans-serif;

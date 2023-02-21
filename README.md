@@ -7,6 +7,8 @@ Projeto desenvolvido por <strong> Guilherme Pablo De Santana Maciel </strong>
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
+- [Reactjs](https://reactjs.org/docs/getting-started.html)
+- [NextJs](https://nextjs.org/docs/getting-started)
 - [Json-server](https://github.com/typicode/json-server)
 - [styled-components](https://styled-components.com/docs/basics)
 
@@ -15,11 +17,19 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [JavaScript](https://javascript.info/document)
 - [TypeScript](https://www.typescriptlang.org/docs/)
 
-### Layout
+### Features
+
+- [x] Play
+- [x] Pause
+- [x] Shuffle
+- [x] Previous
+- [x] Next
+- [x] Repeat
+- [x] scroll - timer
 
 #### Screens
 
-![Layout]()
+![Layout](https://github.com/PabloSanttana/Podcastr/blob/main/layout/1.png)
 
 #### mais informação
 

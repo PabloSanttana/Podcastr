@@ -16,6 +16,7 @@ export const LatesEpisodes = styled.section`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    transition-duration: 0.5s;
 
     li {
       background: ${(props) => props.theme.COLORS.white};
@@ -101,6 +102,12 @@ export const LatesEpisodes = styled.section`
           filter: brightness(0.95);
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: 1650px) {
+    ul {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 `;
